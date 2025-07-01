@@ -11,3 +11,12 @@ Query:
 SELECT s.Name, 
 (SELECT COUNT(*) FROM Loans l WHERE l.StaffID = s.StaffID) AS TotalLoans
 FROM Staff s;
+
+Output:
+
++---------+------------+
+| Name    | TotalLoans |
++---------+------------+
+| Johnson |          1 |
+| Ram     |          0 |
++---------+------------+
